@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Hand gesture web app</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    </head>
+    <body>
+        <center>
+            <div id="div_title">
+            <h1>HAND GESTURE WEB APP
+            </h1>
+        </div>
+        <h3>Take a selfie of gesture to know about its meaning</h3>
+        <h4>On the following gestures the model is trained-</h4>
+        <div id="div1">
+            <span>
+                &#9996;
+            </span>
+            <span>
+                &#128076;
+             </span>
+             <span>
+                &#128077;
+             </span>
+        </div>
+    </center>
+    <center>
+    <div id="div2" class="col-md-4">
+        <label>webcam view</label>
+        <div id="camera"></div>
+        <button id="capture" onclick="snapshot()">capture image</button>
+    </div>
+    <div class="col-md-4">
+        <label>Prediction1</label>
+        <h2 id="emotion_1"></h2>
+        <h2 id="emoji_1"></h2>
+        <br>
+        <label>Prediction2</label>
+        <h2 id="emotion_2"></h2>
+        <h2 id="emoji_2"></h2>
+    </div>
+    <div id="div3" class="col-md-4">
+        <label>Captured</label>
+        <div id="result"></div>
+        <button id="prediction" onclick="check()">Predict Emotion</button>
+    </div>
+</center>
+    </body>
+    <script src="main.js"></script>
+</html>
